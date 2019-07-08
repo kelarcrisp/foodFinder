@@ -18,11 +18,10 @@ module.exports = {
     new CleanWebpackPlugin(['dist']),
     new Dotenv(),
     new HtmlWebpackPlugin({
-      title: 'Project Name',      // CHANGE THIS
+      title: 'foodFinder',      //
       template: './src/index.html',
       inject: 'body'
     })
-
   ],
   module: {
     rules: [

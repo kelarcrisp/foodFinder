@@ -18,7 +18,7 @@ describe('Testing location function', function(){
   it('should return a list of restaurants',function(){
     let eId = 279;
     let eType = 'city';
-    let cuisine = null;
+    let cuisine = 'soul';
     let search = new RestaurantSearch;
     let restaurants = search.cuisineSearch(eId, eType, cuisine)
     restaurants.then (function(response){

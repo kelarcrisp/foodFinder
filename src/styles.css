@@ -2,8 +2,44 @@
   text-align: center;
 }
 
+
+
 .images{
   height: 200px;
   width: 30%;
   background-color: powderblue;
+}
+
+.inputText{
+
+}
+
+#Breakfast, #Lunch, #Dinner, #TakeOut, #Delivery, #Drinks{
+  padding: 10px 20px;
+      font-size: 20px;
+      border-radius: 10px;
+      width: 160px;
+}
+
+#TrendingDrinks, #TrendingHappyHour, #TrendingDinner, #TrendingTakeOut, #TrendingingSuperSushi{
+  padding: 10px 20px;
+      border-radius: 10px;
+      width: 40%;
+
+}
+
+.collectionText{
+  font-size: 18pt;
+
+}
+
+.container{
+  font-family: 'Hind Siliguri', sans-serif;
+}
+
+body{
+  background-color: #CABDBA;
+}
+.card{
+  background-color: #CABDBA;
 }

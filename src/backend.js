@@ -5,7 +5,7 @@ export class RestaurantSearch {
   getLocationID(location) {
     return new Promise(function(resolve,reject){
       let request = new XMLHttpRequest();
-    let url = `https://developers.zomato.com/api/v2.1/locations?query=${location}`;
+    let url = `https://cors-anywhere.herokuapp.com/https://developers.zomato.com/api/v2.1/locations?query=${location}`;
     request.onload = function() {
       if (this.status === 200) {
         resolve(request.response);
@@ -22,11 +22,11 @@ export class RestaurantSearch {
   cuisineSearch (entity_id, entity_type, cuisine) {
     return new Promise(function(resolve, reject){
     let request2 = new XMLHttpRequest();
-    let url = `https://developers.zomato.com/api/v2.1/search?entity_id=${entity_id}&entity_type=${entity_type}&sort=rating&order=desc`;
+    let url = `https://cors-anywhere.herokuapp.com/https://developers.zomato.com/api/v2.1/search?entity_id=${entity_id}&entity_type=${entity_type}&sort=rating&order=desc`;
     if (cuisine) {
       let url = `https://cors-anywhere.herokuapp.com/https://developers.zomato.com/api/v2.1/search?entity_id=${entity_id}&entity_type=${entity_type}&q=${cuisine}&sort=rating&order=desc`;
     }
-    console.log(url);
+    console.log("url "+url);
     request2.onload = function() {
       if (this.status === 200) {
         resolve(request2.response);

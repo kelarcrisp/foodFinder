@@ -42,11 +42,15 @@ export class RestaurantSearch {
     })
   }
 
+//stores restaurant name, hours, rating, url in an array of arrays for use in frontEnd
+  getRestaurantDetails(restaurants) {
+    for (let i = 0; i < restaurants.length; i++) {
+      //loop to store information as array or object
+    }
+  }
+    
 }
 
-  // getRestaurantDetails(restaurant) {
-  //   //hours, url, name
-  // }
 
 
 //always pull location --> required

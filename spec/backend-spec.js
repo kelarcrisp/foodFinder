@@ -3,7 +3,7 @@ import { RestaurantSearch } from './../src/backend.js'
 describe('Testing location function', function(){
 
   it('should return a location response', function(){
-    let location = "Seattle";
+    let location = "${userInput}";
     let search = new RestaurantSearch;
     let result = search.getLocationID(location);
     result.then (function(response){

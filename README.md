@@ -1,17 +1,25 @@
-# Bagheera's Pizzeria
+# Food Finder
 
 #### _A web site for ordering pizza - June 21, 2019_
 
-#### _By **Na Hyung Choi**_
+#### _By **Kelar Crisp, Rochelle Roberts **_
 
 ## Description
 
-On this web site, the user can choose toppings, crust, and a size for one or more pizzas, see the details of the order and the final cost, and "place an order."
+
 
 ### Specs
 | Spec | Input | Output |
 | :-------------     | :------------- | :------------- |
-| **Creates a new pizza through a constructor** | var pizza1 = new Pizza ("large", ["cheese", "sausage"]) | pizza1 = { size : "large", toppings: ["cheese", "sausage"], cost: undefined} |
+get list of restaurants for seattle- name, address , reviews, cuisine
+get list of restaurants based on user Input
+cuisine filter - filter restaurants based on cuisine type
+rating filter -
+hamburger-u search
+distance filter
+suggested search dropdown for UI
+
+
 
 ## Setup/Installation Requirements
 

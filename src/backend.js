@@ -22,10 +22,8 @@ export class RestaurantSearch {
   cuisineSearch (entity_id, entity_type, cuisine) {
     return new Promise(function(resolve, reject){
     let request2 = new XMLHttpRequest();
-    let url = `https://developers.zomato.com/api/v2.1/search?entity_id=${entity_id}&entity_type=${entity_type}&sort=rating&order=desc`;
-    if (cuisine) {
-      let url = `https://cors-anywhere.herokuapp.com/https://developers.zomato.com/api/v2.1/search?entity_id=${entity_id}&entity_type=${entity_type}&q=${cuisine}&sort=rating&order=desc`;
-    }
+    let url = `https://developers.zomato.com/api/v2.1/search?entity_id=${entity_id}&entity_type=${entity_type}&q=${cuisine}&sort=rating&order=desc`;
+
     console.log(url);
     request2.onload = function() {
       if (this.status === 200) {
@@ -42,9 +40,9 @@ export class RestaurantSearch {
 
 }
 
-// getRestaurantDetails(restaurant) {
-//
-// }
+  // getRestaurantDetails(restaurant) {
+  //   //hours, url, name
+  // }
 
 
 //always pull location --> required

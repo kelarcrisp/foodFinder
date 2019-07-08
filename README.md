@@ -2,7 +2,7 @@
 
 #### _A web site for ordering pizza - June 21, 2019_
 
-#### _By **Kelar Crisp, Rochelle Roberts **_
+#### _By **Kelar Crisp, Rochelle Roberts, Joe , Trevor **_
 
 ## Description
 

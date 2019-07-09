@@ -34,16 +34,10 @@ describe('Testing location function', function(){
     let eType = 'city';
     let cuisine = 'soul';
     let search = new RestaurantSearch;
-
-    let test = search.cuisineSearch(eId, eType, cuisine);
-    console.log('test :  ' + test);
-    expect(test.length).toEqual(10);
+    search.cuisineSearch(eId, eType, cuisine);
+    expect(deetsList.length).toEqual(10);
 
 
   })
 
-
-
-
 })
- 

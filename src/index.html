@@ -8,6 +8,7 @@
 
     
     <!-- user input section -->
+    <div class="page1">
     <div class="container">
         <h1 class="topTitle">Find Food for Foodies</h1>
       <label class="inputText" for="userLocation">Enter your Location: City,St</label>
@@ -31,7 +32,7 @@
         <option value="German food">
 
       </datalist>
-      <button type="button" id="search">Search</button>
+      <button class="btn btn-primary btn-info" type="button" id="search">Search</button>
 
       <br>
         <!-- <img src="https://i.pinimg.com/originals/56/29/d5/5629d529bbaf9894b047b0bf031b03bd.jpg" alt="restaurant pic"> -->
@@ -43,7 +44,7 @@
 <br>
 
 <!-- show page one initially, hide after click search -->
-      <div class="page1">
+      
         <div class="card">
 
           <span class="card-body">
@@ -69,7 +70,7 @@
           <button type="button" class="collection" ><img src="https://b.zmtcdn.com/data/collections/b53772a204429cb9b42313d6dc22bf3c_1556018415.jpg?fit=around%7C300%3A250&crop=300%3A250%3B%2A%2C%2A"alt="trending pic" id="trending">Trending this week</button>
           
     <hr>
-          <button type="button" class="collection" ><img src ="https://b.zmtcdn.com/data/collections/67c4acc3f607dbcff71a8e1e77a70c8a_1535469199.jpg?fit=around%7C300%3A250&ampcrop=300%3A250%3B%2A%2C%2A"alt="Happy Hours pic"id="happyHour">Happy Hours</button>
+          <button type="button" class="collection" ><img src ="https://b.zmtcdn.com/data/collections/67c4acc3f607dbcff71a8e1e77a70c8a_1535469199.jpg?fit=around%7C300%3A250&ampcrop=300%3A250%3B%2A%2C%2A"alt="Happy Hours pic"id="happyHour">Happy Hour</button>
     
     <hr>
           </div>
@@ -89,6 +90,14 @@
       </div> 
       <!-- end page1, start page 2, with restaurant info output-->
       <div class="page2">
+
+          <img class="images"src="https://ak2.picdn.net/shutterstock/videos/2427452/thumb/1.jpg" alt="restaurant pic">
+          <img class="images"src="https://uhdwallpapers.org/uploads/cache/4022376060/golden-gate-bridge_600x338-mm-90.jpg" alt="restaurant pic">
+          <img class="images"src="https://upload.wikimedia.org/wikipedia/commons/a/a8/Sydney_harbour_bridge_new_south_wales.jpg" alt="restaurant pic">
+
+          <p>
+              <button type="button" class="btn btn-primary btn-block"onclick="location.reload();">Go back to Home page</button>
+          </p>
         <div id="outputTitle"></div>
       
         <div id="testout"></div>
@@ -98,3 +107,6 @@
 
     </body>
 </html>
+
+
+

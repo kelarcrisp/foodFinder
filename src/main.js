@@ -20,17 +20,10 @@ location.then(function(response){
   $(".page1").hide();
   $(".page2").show(); 
 
-  
-
   deetsPromise.then((restaurant) => {
     for(var i = 0; i < restaurant.length; i++){
-     
-
       $("#testout").append(`<div class='card-header test'> ${restaurant[i].name}</div><br> <div class=card-body>Hours: ${restaurant[i].hours}
       <br>rating: ${restaurant[i].rating}<br>url: <a href="${restaurant[i].url}">Website</div><br>`);
-
-
-
     }
 
   })
@@ -55,12 +48,9 @@ function work(cuisineID){
       let entityType = body.location_suggestions[0].entity_type;
       let deetsPromise =  search.cuisineSearch(entityID, entityType, cuisineID);
     
-      
-    
       $(".page1").hide();
-      $(".page2").show(); 
-    
-      
+      $(".page2").show();
+      $("#outputTitle").html(`<h2 class="outputResults">${cuisineID} results</h2>`)
     
       deetsPromise.then((restaurant) => {
         for(var i = 0; i < restaurant.length; i++){
@@ -95,5 +85,22 @@ function work(cuisineID){
             let cuisineID = "drinks"
              work(cuisineID) 
              });
+          
+            $("#trending").click(function(event){
+                let cuisineID = "trending"
+                 work(cuisineID) 
+                 });
+                 $("#happyHour").click(function(event){
+                  let cuisineID = "hapoyHour"
+                   work(cuisineID) 
+                   });
+                   $("#burgers").click(function(event){
+                    let cuisineID = "burgers"
+                     work(cuisineID) 
+                     });
+                     $("#lateNight").click(function(event){
+                      let cuisineID = "lateNight"
+                       work(cuisineID) 
+                       });
 
   });

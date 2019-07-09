@@ -5,16 +5,16 @@
 .page2{
   display: none;
 }
-
+.container{
+  background-color:#83D1A7
+}
 .images{
   height: 200px;
   width: 30%;
-  background-color: powderblue;
+  background-color:#83D1A7;
 }
 
-.inputText{
 
-}
 
 #Breakfast, #Lunch, #Dinner, #TakeOut, #Delivery, #Drinks{
   padding: 10px 20px;
@@ -23,29 +23,35 @@
       width: 160px;
 }
 
-#TrendingDrinks, #TrendingHappyHour, #TrendingDinner, #TrendingTakeOut, #TrendingingSuperSushi{
+.collectionText{
+  font-size: 18pt;
   padding: 10px 20px;
       border-radius: 10px;
       width: 40%;
-
+  color: #D1D5DE;
 }
-
-.collectionText{
-  font-size: 18pt;
-
-}
-
 .container{
   font-family: 'Hind Siliguri', sans-serif;
 }
 
 body{
-  background-color: #CABDBA;
+  background-color: #83D1A7;
 }
 .card{
-  background-color: #CABDBA;
+  background-color: #2E4057;
+}
+.collection{
+  font-size: 18pt;
+  background-color: transparent;
+ border-color: transparent;
+ color: #83D1A7
+  
 }
 
 .test{
   background-color: aquamarine;
+}
+
+.outputResults{
+  text-align: center;
 }

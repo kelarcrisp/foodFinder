@@ -7,30 +7,7 @@ import { RestaurantSearch } from './backend.js';
 $(document).ready(function(){
 $("#search").click(function(event){
 let cuisineID = $("#cuisineID").val();
-let search = new RestaurantSearch;
-let location = search.getLocationID($("#userLocation").val());
-let cuisine = search.getLocationID($("#cuisineID").val());
-
-location.then(function(response){
-  let body = JSON.parse(response);
-  let entityID = body.location_suggestions[0].entity_id;
-  let entityType = body.location_suggestions[0].entity_type;
-  let deetsPromise =  search.cuisineSearch(entityID, entityType, cuisineID);
-
-  $(".page1").hide();
-  $(".page2").show(); 
-
-  deetsPromise.then((restaurant) => {
-    for(var i = 0; i < restaurant.length; i++){
-      $("#testout").append(`<div class='card-header test'> ${restaurant[i].name}</div><br> <div class=card-body>Hours: ${restaurant[i].hours}
-      <br>rating: ${restaurant[i].rating}<br>url: <a href="${restaurant[i].url}">Website</div><br>`);
-    }
-
-  })
-
-
-
-});
+work(cuisineID) 
 });
 $("#Breakfast").click(function(event){
   let cuisineID = "breakfast"
@@ -54,8 +31,10 @@ function work(cuisineID){
     
       deetsPromise.then((restaurant) => {
         for(var i = 0; i < restaurant.length; i++){
-          $("#testout").append(`<div class='card-header test'> ${restaurant[i].name}</div><br> <div class=card-body>Hours: ${restaurant[i].hours}
-          <br>rating: ${restaurant[i].rating}<br>url: <a href="${restaurant[i].url}">Website</div><br>`)
+          $("#testout").hide()
+          $("#testout").append(`<div class='card-header test'><img class="imageSize"src='${restaurant[i].image}'> ${restaurant[i].name}</div><br> <div class=card-body>Hours: ${restaurant[i].hours}
+          <br>rating: ${restaurant[i].rating}<br><a href="${restaurant[i].url}">${restaurant[i].name} Website</div><br>`);
+          $("#testout").slideDown(2000)
   }
   
   
@@ -91,7 +70,7 @@ function work(cuisineID){
                  work(cuisineID) 
                  });
                  $("#happyHour").click(function(event){
-                  let cuisineID = "hapoyHour"
+                  let cuisineID = "happyHour"
                    work(cuisineID) 
                    });
                    $("#burgers").click(function(event){

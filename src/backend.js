@@ -43,11 +43,9 @@ export class RestaurantSearch {
       request.send();
     })
     //this will store the necessary info for each restaurant as an object in an array [top 10]
-    promise.then(function(response){
+    return promise.then(function(response){
       let deetsList = [];
       let body = JSON.parse(response);
-      console.log(body);
-      console.log("length:  " + body.restaurants.length);
       for (let i=0; i < 10; i++) {
         let source = body.restaurants[i].restaurant;
         let name = source.name;
@@ -55,10 +53,10 @@ export class RestaurantSearch {
         let rating = source.user_rating.aggregate_rating;
         let url = source.url;
         let restaurant = new Restaurant (name, hours, rating, url);
-        console.log(restaurant);
+       // console.log(restaurant);
         deetsList.push(restaurant);
       }
-      console.log(deetsList);
+      //console.log(deetsList);
       return deetsList;
     })
   }

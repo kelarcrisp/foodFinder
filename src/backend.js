@@ -33,7 +33,7 @@ export class RestaurantSearch {
       if (cuisine === "trending") {
         query = `&collection_id=1`;
       }
-      if (cuisine === "happyhour") {
+      if (cuisine === "happyHour") {
         query = `&collection_id=339`;
       }
       if (cuisine === "burgers") {
@@ -43,7 +43,7 @@ export class RestaurantSearch {
         query = `&collection_id=6`;
       }
       let request = new XMLHttpRequest();
-      let url = `https://cors-anywhere.herokuapp.com/https://developers.zomato.com/api/v2.1/search?entity_id=${entity_id}&entity_type=${entity_type}${query }&count=10&sort=rating&order=desc`;
+      let url = `https://cors-anywhere.herokuapp.com/https://developers.zomato.com/api/v2.1/search?entity_id=${entity_id}&entity_type=${entity_type}${query }&sort=rating&order=desc`;
       request.onload = function() {
         if (this.status === 200) {
           resolve(request.response);
@@ -59,13 +59,17 @@ export class RestaurantSearch {
     return promise.then(function(response){
       let deetsList = [];
       let body = JSON.parse(response);
+      console.log(body);
       for (let i=0; i < 10; i++) {
         let source = body.restaurants[i].restaurant;
         let name = source.name;
         let hours = source.timings;
         let rating = source.user_rating.aggregate_rating;
         let url = source.url;
-        let restaurant = new Restaurant (name, hours, rating, url);
+        let image = source.featured_image;
+        let reviews = source.all_reviews.reviews;
+        let address = [source.location.address, source.location.city, source.location.zipcode]
+        let restaurant = new Restaurant (name, hours, rating, url, image, reviews, address);
         console.log(restaurant);
         deetsList.push(restaurant);
       }
@@ -77,11 +81,14 @@ export class RestaurantSearch {
 
 
 
-function Restaurant (name, hours, rating, url) {
+function Restaurant (name, hours, rating, url, image, reviews, address) {
   this.name = name,
   this.hours = hours,
   this.rating = rating,
-  this.url = url
+  this.url = url,
+  this.image = image,
+  this.reviews = reviews,
+  this.address = address
 }
 
 

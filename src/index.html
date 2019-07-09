@@ -6,19 +6,20 @@
   </head>
   <body>
 
-    <h1 class="topTitle">Find Food for Foodies</h1>
+    
     <!-- user input section -->
     <div class="container">
+        <h1 class="topTitle">Find Food for Foodies</h1>
       <label class="inputText" for="userLocation">Enter your Location: City,St</label>
       <input type="text" id="userLocation" required>
       <!-- <label for="userInput">Search for Food</label>
       <input id ="userInput"> -->
       <br>
 
-      <label for="languages">Search for Restaurant cuisine</label>
+      <label for="cuisine">Search for Restaurant cuisine</label>
 
       <input id ="cuisineID"type="text" list="cuisine">
-      <datalist value="cuisine">
+      <datalist>
         <option value="American food">
         <option value="Italian food">
         <option value="chinese food">
@@ -31,7 +32,6 @@
 
       </datalist>
       <button type="button" id="search">Search</button>
-      <a href="./second.html">Test Link</a>
 
       <br>
         <!-- <img src="https://i.pinimg.com/originals/56/29/d5/5629d529bbaf9894b047b0bf031b03bd.jpg" alt="restaurant pic"> -->
@@ -40,7 +40,7 @@
         <img class="images"src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcROhBbNf_gHjL-qN-cXF8uX9O5uX68e_7jLSCQ3aLidWWVXz4Asug" alt="restaurant pic">
 
       </div>
-
+<br>
 
 <!-- show page one initially, hide after click search -->
       <div class="page1">
@@ -66,20 +66,20 @@
             <div class="col-md-6">
     
     
-          <span class="collectionText"><img src="https://b.zmtcdn.com/data/collections/b53772a204429cb9b42313d6dc22bf3c_1556018415.jpg?fit=around%7C300%3A250&crop=300%3A250%3B%2A%2C%2A"alt="trending pic" id="TrendingDrinks">Trending this week</span>
+          <button type="button" class="collection" ><img src="https://b.zmtcdn.com/data/collections/b53772a204429cb9b42313d6dc22bf3c_1556018415.jpg?fit=around%7C300%3A250&crop=300%3A250%3B%2A%2C%2A"alt="trending pic" id="trending">Trending this week</button>
+          
+    <hr>
+          <button type="button" class="collection" ><img src ="https://b.zmtcdn.com/data/collections/67c4acc3f607dbcff71a8e1e77a70c8a_1535469199.jpg?fit=around%7C300%3A250&ampcrop=300%3A250%3B%2A%2C%2A"alt="Happy Hours pic"id="happyHour">Happy Hours</button>
     
-    
-          <span class="collectionText"><img src ="https://b.zmtcdn.com/data/collections/67c4acc3f607dbcff71a8e1e77a70c8a_1535469199.jpg?fit=around%7C300%3A250&amp;crop=300%3A250%3B%2A%2C%2A"alt="Happy Hours pic"id="TrendingHappyHour">Happy Hours</span>
-    
-    
+    <hr>
           </div>
           </div>
             <div class="row">
               <div class="col-md-6">
-          <span class="collectionText"><img src="https://b.zmtcdn.com/data/collections/d38669ed7b829ceb2814678420a629da_1560353561.jpg?fit=around%7C300%3A250&amp;crop=300%3A250%3B%2A%2C%2A"alt="Kickass burgers pic" id="TrendingDinner">Kickass Burgers</span>
+          <button type="button" class="collection" ><img src="https://b.zmtcdn.com/data/collections/d38669ed7b829ceb2814678420a629da_1560353561.jpg?fit=around%7C300%3A250&ampcrop=300%3A250%3B%2A%2C%2A"alt="Kickass burgers pic" id="burgers">Kickass Burgers</button>
     
-  
-          <span class="collectionText"> <img src ="https://b.zmtcdn.com/data/collections/33ebdc279ce63a293c52095b1facf611_1539323119.jpg?fit=around%7C300%3A250&amp;crop=300%3A250%3B%2A%2C%2A" alt="Late night Restaurants"id="TrendingTakeOut">Late Night Restaurants</span>
+  <hr>
+          <button type="button" class="collection" > <img src ="https://b.zmtcdn.com/data/collections/33ebdc279ce63a293c52095b1facf611_1539323119.jpg?fit=around%7C300%3A250&ampcrop=300%3A250%3B%2A%2C%2A" alt="Late night Restaurants"id="lateNight">Late Night</button>
     
             </div>
           </div>
@@ -89,17 +89,12 @@
       </div> 
       <!-- end page1, start page 2, with restaurant info output-->
       <div class="page2">
-        <div class="card">
-          <span class="card-header">
-            <img id="restaurantImg" src="" alt="">
-            <div id="restaurantTitle"></div>
-          </span>
-        </div>
-         <!-- put address, cuisine, website link  in body-->
-        <div class="card-body">
-          <div id="restaurantInfo"></div>  
-        </div>
+        <div id="outputTitle"></div>
+      
+        <div id="testout"></div>
       </div>
+      
+    </div>
 
     </body>
 </html>

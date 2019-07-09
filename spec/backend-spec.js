@@ -32,10 +32,10 @@ describe('Testing location function', function(){
   it('should test deetsList',function(){
     let eId = 279;
     let eType = 'city';
-    let cuisine = 'soul';
+    let cuisine = 'chinese';
     let search = new RestaurantSearch;
-    search.cuisineSearch(eId, eType, cuisine);
-    expect(deetsList.length).toEqual(10);
+    let test = search.cuisineSearch(eId, eType, cuisine);
+    expect(test.length).toEqual(10);
 
 
   })

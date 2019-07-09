@@ -5,7 +5,7 @@ import './styles.css';
 import { RestaurantSearch } from './backend.js';
 
 $(document).ready(function(){
-$("#search").click(function(event){
+$("#search").click(function(){
 let cuisineID = $("#cuisineID").val();
 
 let search = new RestaurantSearch;

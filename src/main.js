@@ -22,7 +22,19 @@ cuisine.then(function(response){
   let name = body.restaurants[0].restaurant.name;
 
 })
-})
+
+$(".page1").hide();
+$(".page2").show(); 
+
+// call function returns array of restaurant objects
+// let restaurantList = [{"Little Restaurant", "123 Main", "Italian", "www.someweb.com"}, {"Little Restaurant", "123 Main", "Italian", "www.someweb.com"}];
+// for loop to show
+
+
+
+// $("#restaurantTitle").text(
+
 
 })
+});
 });

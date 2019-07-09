@@ -2,7 +2,9 @@
   text-align: center;
 }
 
-
+.page2{
+  display: none;
+}
 
 .images{
   height: 200px;

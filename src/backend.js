@@ -26,6 +26,7 @@ export class RestaurantSearch {
 
   //grabs list of restaurants defined by city search above and cuisine input
   //stores restaurant name, hours, rating, url in an array of arrays for use in frontEnd. need a variable to store the return (ex. let test = search.cuisineSearch(params))
+  //can use this same code for the buttons
   cuisineSearch (entity_id, entity_type, cuisine) {
     let promise = new Promise(function(resolve, reject){
       let request = new XMLHttpRequest();

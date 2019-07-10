@@ -3,12 +3,12 @@
 #### _By ** Kelar Crisp, Rochelle Roberts, Joe, Trevor **_
 
 ## Description
-Food Finder makes it easy and fun to find restaurants in any area! Search by cuisine type, restaurand name, and more to find food that sparks joy.
+Food Finder makes it easy and fun to find restaurants in any area! Discover your new favorite restaurant by searching cuisine type or food category.
 
 
 ### Specs
-| Spec | Input | Output |
-| :-------------     | :------------- | :------------- |
+| Spec |
+| :-------------     |
 get list of restaurants for seattle- name, address , reviews, cuisine
 get list of restaurants based on user Input
 cuisine filter - filter restaurants based on cuisine type

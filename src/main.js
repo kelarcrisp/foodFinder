@@ -33,15 +33,7 @@ $(document).ready(function() {
       deetsPromise.then(restaurant => {
         for (var i = 0; i < restaurant.length; i++) {
           $("#testout").hide();
-          $("#testout")
-            .append(`<div class='card-header test'><img class="imageSize"src='${
-              restaurant[i].image
-            }'> ${restaurant[i].name}</div><br> <div class=card-body>Hours: ${
-              restaurant[i].hours
-            }
-          <br>rating: ${restaurant[i].rating}<br><a href="${
-  restaurant[i].url
-}">${restaurant[i].name} Website</div><br>`);
+          $("#testout").append(`<div class='card-header test'><img class="imageSize"src='${restaurant[i].image}'> ${restaurant[i].name}</div><br> <div class=card-body>Hours: ${restaurant[i].hours}<br>Rating: ${restaurant[i].rating}<br><a href="${restaurant[i].url}">${restaurant[i].name} Website</div><br>`);
           $("#testout").slideDown(2000);
         }
       });

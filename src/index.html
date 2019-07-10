@@ -25,7 +25,7 @@
       </div>
     </div>
     <!-- user input section -->
-    <div class="container topSection">
+    <div class="container-fluid topSection">
         <h1 class="topTitle">Find Food for Foodies</h1>
       <label class="inputText" for="userLocation">Enter your Location: City,St</label>
       <input type="text" id="userLocation" required>
@@ -35,18 +35,17 @@
 
       <label for="cuisine">Search for Restaurant cuisine</label>
 
-      <input id ="cuisineID"type="text" list="cuisine">
-      <datalist>
-        <option value="American food">
-        <option value="Italian food">
-        <option value="chinese food">
-        <option value="French food">
-        <option value="Mexican food">
-        <option value="Indian food">
-        <option value="Cajun food">
-        <option value="Soul food">
-        <option value="German food">
-
+      <input id ="cuisineID" type="text" list="cuisine">
+      <datalist id="cuisine">
+        <option value="American">
+        <option value="Italian">
+        <option value="Chinese">
+        <option value="French">
+        <option value="Mexican">
+        <option value="Indian">
+        <option value="Cajun">
+        <option value="Soul">
+        <option value="German">
       </datalist>
       <button class="btn btn-primary btn-info" type="button" id="search">Search</button>
 
@@ -55,8 +54,9 @@
         <img class="images"src="http://samuiholiday.com/wp-content/uploads/2018/11/4K-Restaurant.jpg" alt="restaurant pic">
         <img class="images"src="https://i.pinimg.com/originals/93/96/01/9396015f18bd4ab0b25d3742fcd6683b.jpg" alt="restaurant pic">
         <img class="images"src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcROhBbNf_gHjL-qN-cXF8uX9O5uX68e_7jLSCQ3aLidWWVXz4Asug" alt="restaurant pic">
-
+<!-- end search area -->
       </div>
+      
 <br>
 
 <!-- show page one initially, hide after click search -->

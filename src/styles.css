@@ -1,7 +1,11 @@
 :root {
-  --title-bg-color: #191716; 
+  --title-bg-color: #d5fff3; 
 }
-
+.topSection{
+  background-color: var(--title-bg-color);
+  width: 100%
+  /* background-color: var(--title-bg-color); */
+}
 body{
   background-color: var(--title-bg-color);
 }
@@ -14,10 +18,7 @@ body{
 .page2{
   display: none;
 }
-.topSection{
-  background-color: #2E4057;
-  /* background-color: var(--title-bg-color); */
-}
+
 .images{
   height: 200px;
   width: 30%;
@@ -40,7 +41,7 @@ body{
       width: 40%;
   color: #D1D5DE;
 }
-.container{
+.container-fluid{
   font-family: 'Hind Siliguri', sans-serif;
 }
 

@@ -36,10 +36,19 @@ suggested search dropdown for UI
 
 ## Support and contact details
 
-_Please contact Na Hyung with questions and comments._
+
 
 ### License
 
 *GNU GPLv3*
 
-Copyright (c) 2019 **_Na Hyung Choi_**
+## Things To Do!
+Cached data - storage, load faster, progressive web apps, using service worker progressively faster. Chrome performance and memory tab
+
+User analytics - track clicks, track with cookie or sign in. 
+
+Navigation - navbar, framework, redux router 
+
+Styling - create color scheme. Use css variables, loading screen 
+
+Deploying website! lots of options

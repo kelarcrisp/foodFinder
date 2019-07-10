@@ -38,6 +38,7 @@
     "karma-jquery": "^0.2.2",
     "karma-sourcemap-loader": "^0.3.7",
     "karma-webpack": "^2.0.13",
+    "progress-bar-webpack-plugin": "^1.12.1",
     "style-loader": "^0.20.2",
     "uglifyjs-webpack-plugin": "^1.2.2",
     "webpack-cli": "^2.0.9",

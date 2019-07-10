@@ -6,7 +6,7 @@ import { RestaurantSearch } from './backend.js';
 
 $(document).ready(function(){
   $("#search").click(function(event){
-    let cuisineID = $("#cuisineID").val();
+    let cuisineID = $("#cuisineID").val().toLowerCase(); //added toLowerCase
     work(cuisineID);
   });
   $("#Breakfast").click(function(event){
@@ -17,7 +17,6 @@ $(document).ready(function(){
   function work(cuisineID){
     let search = new RestaurantSearch;
     let location = search.getLocationID($("#userLocation").val());
-    let cuisine = search.getLocationID($("#cuisineID").val());
 
     location.then(function(response){
       let body = JSON.parse(response);
@@ -28,29 +27,40 @@ $(document).ready(function(){
       $(".page1").hide();
       $(".page2").show();
       $("#outputTitle").html(`<h2 class="outputResults">${cuisineID} results</h2>`)
-
+//placeb---- progress bar
       let timer = 0
       let update_loop = setInterval(secCheck, 300);
       function secCheck() {
         if(timer < 100) {
-          timer += 15;
+          timer += 10;
           $('.bar').html(`<div class="progress-bar bg-info progress-bar-striped progress-bar-animated" aria-valuenow="${timer}"; style="width:${timer}%;height:20px">${timer}%</div>`);
         } else {
           clearInterval(update_loop);
         }
       }
-      deetsPromise.then((restaurant) => {
+// ==== end progress bar====
+//checks if localStorage exists, if not calls API
+      if (localStorage.getItem(`${entityID}${entityType}${cuisineID}`)) {
+        let restaurant = deetsPromise;
+        $("#testout").hide()
         for(var i = 0; i < restaurant.length; i++){
-          // $("#testout").hide()
           $("#testout").append(`<div class='card-header test'><img class="imageSize"src='${restaurant[i].image}'> ${restaurant[i].name}</div><br> <div class=card-body>Hours: ${restaurant[i].hours}
           <br>rating: ${restaurant[i].rating}<br><a href="${restaurant[i].url}">${restaurant[i].name} Website</div><br>`);
-          $("#testout").slideDown(2000)
+          $("#testout").slideDown()
           $('.bar').hide();
         }
-
-
-
-      });
+      } else {
+        console.log(typeof deetsPromise);
+        deetsPromise.then((restaurant) => {
+          $("#testout").hide()
+          for(var i = 0; i < restaurant.length; i++){
+            $("#testout").append(`<div class='card-header test'><img class="imageSize"src='${restaurant[i].image}'> ${restaurant[i].name}</div><br> <div class=card-body>Hours: ${restaurant[i].hours}
+            <br>rating: ${restaurant[i].rating}<br><a href="${restaurant[i].url}">${restaurant[i].name} Website</div><br>`);
+            $("#testout").slideDown()
+            $('.bar').hide();
+          }
+        });
+      } //end of localStorage check
     });
   }
   $("#Lunch").click(function(event){

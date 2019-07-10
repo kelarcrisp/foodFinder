@@ -1,11 +1,9 @@
-# Food Finder
+# Food Finder Web App
 
-#### _A web site for ordering pizza - June 21, 2019_
-
-#### _By **Kelar Crisp, Rochelle Roberts, Joe, Trevor **_
+#### _By ** Kelar Crisp, Rochelle Roberts, Joe, Trevor **_
 
 ## Description
-
+Food Finder makes it easy and fun to find restaurants in any area! Search by cuisine type, restaurand name, and more to find food that sparks joy.
 
 
 ### Specs
@@ -23,16 +21,24 @@ suggested search dropdown for UI
 
 ## Setup/Installation Requirements
 
-* Clone this repository and open the .html file.
+* Clone this repository, install dependencies, run project
+
+```sh
+$ git clone https://github.com/epicoding95/foodFinder.git
+$ cd foodFinder
+$ npm install
+$ npm run start
+```
 * OR go directly to the [Web page](http://schoinh.github.io/pizza)
 
 ## Known Bugs
 * No known bugs at this time.
 
 ## Technologies Used
-* JavaScript
+* JavaScript 
 * jQuery
 * Bootstrap
+* Webpack
 
 ## Support and contact details
 

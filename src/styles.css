@@ -1,3 +1,12 @@
+:root {
+  --title-bg-color: #191716; 
+}
+
+body{
+  background-color: var(--title-bg-color);
+}
+
+
 .topTitle{
   text-align: center;
 }
@@ -5,8 +14,9 @@
 .page2{
   display: none;
 }
-.container{
-  background-color:#83D1A7
+.topSection{
+  background-color: #2E4057;
+  /* background-color: var(--title-bg-color); */
 }
 .images{
   height: 200px;
@@ -34,9 +44,7 @@
   font-family: 'Hind Siliguri', sans-serif;
 }
 
-body{
-  background-color: #83D1A7;
-}
+
 .card{
   background-color: #2E4057;
 }

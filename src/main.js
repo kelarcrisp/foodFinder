@@ -7,6 +7,13 @@ import { RestaurantSearch } from "./backend.js";
 
 
 $(document).ready(function(){
+
+
+  if (localStorage.username)
+  {
+    $('.login-page').hide();
+  }
+
   $("#search").click(function(event){
 
     let cuisineID = $("#cuisineID").val();
@@ -20,6 +27,7 @@ $(document).ready(function(){
     $('form').animate({height: "toggle", opacity: "toggle"}, "slow");
   });
   $('.signIn').click(function(){
+    localStorage.setItem('username','true');
     $('.login-page').hide();
   });
 

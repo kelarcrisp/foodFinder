@@ -74,6 +74,7 @@ export class RestaurantSearch {
         deetsList.push(restaurant);
       }
       console.log(deetsList);
+      localStorage.setItem('Seattle', JSON.stringify(body));
       return deetsList;
     })
   }

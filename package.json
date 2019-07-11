@@ -6,7 +6,7 @@
   "scripts": {
     "test": "./node_modules/karma/bin/karma start karma.conf.js",
     "build": "webpack --mode development",
-    "start": "npm run build; webpack-dev-server --open --mode development",
+    "start": "npm run build && webpack-dev-server --open --mode development",
     "lint": "eslint src/*.js"
   },
   "keywords": [],

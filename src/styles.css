@@ -1,31 +1,48 @@
 :root {
   --title-bg-color: #d5fff3; 
+  --main-font: 'Quicksand', sans-serif;
 }
-.topSection{
-  background-color: var(--title-bg-color);
-  width: 100%
-  /* background-color: var(--title-bg-color); */
+.login-page{
+  display: none;
 }
 body{
   background-color: var(--title-bg-color);
 }
 
-
-.topTitle{
-  text-align: center;
+.flex-container{
+  display: flex;
+  justify-content: center;
 }
 
-.page2{
-  display: none;
+.flex-item{
+  padding: 10px;
+}
+/* user input section */
+
+.topSection{
+  background-color: var(--title-bg-color);
+  width: 100%;
+  
+}
+
+.topTitle{
+  margin-top: 2%;
+  font-family: var(--main-font);
+  text-align: center;
+  font-size: 60pt;
+}
+
+.inputText {
+  font-size: 20pt;
+  font-family: var(--main-font);
 }
 
 .images{
   height: 200px;
   width: 30%;
+  max-width: 100%;
   background-color:#83D1A7;
 }
-
-
 
 #Breakfast, #Lunch, #Dinner, #TakeOut, #Delivery, #Drinks{
   padding: 10px 20px;
@@ -125,5 +142,9 @@ height: 100%;
   color: #4CAF50;
 }
 .form .register-form{
+  display: none;
+}
+
+.page2{
   display: none;
 }

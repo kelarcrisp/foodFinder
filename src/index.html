@@ -1,24 +1,27 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <link href="https://fonts.googleapis.com/css?family=Hind+Siliguri|Raleway|Russo+One&display=swap" rel="stylesheet">
-    <title>Food Finder</title>
-  </head>
-  <body>
-    <!-- user input section -->
-    <div class="page1">
+
+<head>
+  <!-- <link href="https://fonts.googleapis.com/css?family=Hind+Siliguri|Raleway|Russo+One&display=swap" rel="stylesheet"> -->
+  <link href="https://fonts.googleapis.com/css?family=Fredoka+One|Quicksand&display=swap" rel="stylesheet">
+  <title>Food Finder</title>
+</head>
+
+<body>
+  <div class="page1">
+    <!-- login promt -->
     <div class="login-page">
       <div class="form">
-          <form class="register-form">
+        <form class="register-form">
           <input type="text" placeholder="username">
           <input type="text" placeholder="password">
           <input type="text" placeholder="email id">
-          <button type="button" name="button"class="signIn">Create</button>
+          <button type="button" name="button" class="signIn">Create</button>
           <p class="message">Already Registered? <a href="#">Login</a></p>
         </form>
         <form class="login-form">
-          <input type="text"required placeholder="user name"/>
-          <input type="password" required placeholder="password"/>
+          <input type="text" required placeholder="user name" />
+          <input type="password" required placeholder="password" />
           <button type="button" name="button" class="signIn">login</button>
           <p class="message"> not Registered? <a href="#"> Register</a></p>
         </form>
@@ -26,99 +29,129 @@
     </div>
     <!-- user input section -->
     <div class="container-fluid topSection">
-        <h1 class="topTitle">Find Food for Foodies</h1>
-      <label class="inputText" for="userLocation">Enter your Location: City,St</label>
-      <input type="text" id="userLocation" required>
-      <!-- <label for="userInput">Search for Food</label>
-      <input id ="userInput"> -->
-      <br>
-
-      <label for="cuisine">Search for Restaurant cuisine</label>
-
-      <input id ="cuisineID" type="text" list="cuisine">
-      <datalist id="cuisine">
-        <option value="American">
-        <option value="Italian">
-        <option value="Chinese">
-        <option value="French">
-        <option value="Mexican">
-        <option value="Indian">
-        <option value="Cajun">
-        <option value="Soul">
-        <option value="German">
-      </datalist>
-      <button class="btn btn-primary btn-info" type="button" id="search">Search</button>
-
-      <br>
-        <!-- <img src="https://i.pinimg.com/originals/56/29/d5/5629d529bbaf9894b047b0bf031b03bd.jpg" alt="restaurant pic"> -->
-        <img class="images"src="http://samuiholiday.com/wp-content/uploads/2018/11/4K-Restaurant.jpg" alt="restaurant pic">
-        <img class="images"src="https://i.pinimg.com/originals/93/96/01/9396015f18bd4ab0b25d3742fcd6683b.jpg" alt="restaurant pic">
-        <img class="images"src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcROhBbNf_gHjL-qN-cXF8uX9O5uX68e_7jLSCQ3aLidWWVXz4Asug" alt="restaurant pic">
-<!-- end search area -->
+      <h1 class="topTitle">Food Finder</h1>
+      <div class="flex-container">
+        <div class="flex-item">
+          <label class="inputText" for="userLocation">Area: </label>
+          <input type="text" id="userLocation" required>
+        </div>
+        <div class="flex-item">
+          <label class="inputText" for="cuisine">Cuisine: </label>
+          <input id="cuisineID" type="text" list="cuisine">
+          <datalist id="cuisine">
+            <option value="American">
+            <option value="Italian">
+            <option value="Chinese">
+            <option value="French">
+            <option value="Mexican">
+            <option value="Indian">
+            <option value="Cajun">
+            <option value="Soul">
+            <option value="German">
+          </datalist>
+          <button class="btn btn-primary btn-info" type="button" id="search">Search</button>
+        </div>
       </div>
-      
-<br>
 
-<!-- show page one initially, hide after click search -->
+      <br>
+      <div class="flex-container">
+        <img class="flex-item images" src="http://samuiholiday.com/wp-content/uploads/2018/11/4K-Restaurant.jpg"
+          alt="restaurant pic">
+        <img class="flex-item images" src="https://i.pinimg.com/originals/93/96/01/9396015f18bd4ab0b25d3742fcd6683b.jpg"
+          alt="restaurant pic">
+        <img class="flex-item images"
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcROhBbNf_gHjL-qN-cXF8uX9O5uX68e_7jLSCQ3aLidWWVXz4Asug"
+          alt="restaurant pic">
+      </div>
+      <!-- end search area -->
+    </div>
 
-        <div class="card">
+    <br>
 
-          <span class="card-body">
+    <!-- show page one initially, hide after click search -->
 
-          <button type="button" id="Breakfast" name="search"><img src="https://b.zmtcdn.com/images/search_tokens/app_icons/category_8.png?output-format=webp" alt="Breakfast">Breakfast</button>
+    <div class="card">
 
-          <button type="button" id="Lunch" name="search"><img src="https://b.zmtcdn.com/images/search_tokens/app_icons/category_9.png?output-format=webp" alt="lunch">Lunch</button>
+      <span class="card-body">
 
-          <button type="button"id="Dinner" name="search"><img src="https://b.zmtcdn.com/images/search_tokens/app_icons/category_10.png?output-format=webp" alt="dinner">Dinner</button>
+        <button type="button" id="Breakfast" name="search"><img
+            src="https://b.zmtcdn.com/images/search_tokens/app_icons/category_8.png?output-format=webp"
+            alt="Breakfast">Breakfast</button>
 
-          <button type="button"id="TakeOut" name="search"><img src="https://b.zmtcdn.com/images/search_tokens/app_icons/category_5.png?output-format=webp" alt="TakeOut">Take out</button>
+        <button type="button" id="Lunch" name="search"><img
+            src="https://b.zmtcdn.com/images/search_tokens/app_icons/category_9.png?output-format=webp"
+            alt="lunch">Lunch</button>
 
-          <button type="button" id="Delivery"name="search"><img src="https://b.zmtcdn.com/images/search_tokens/app_icons/category_1.png?output-format=webp" alt="Delivery">Delivery</button>
+        <button type="button" id="Dinner" name="search"><img
+            src="https://b.zmtcdn.com/images/search_tokens/app_icons/category_10.png?output-format=webp"
+            alt="dinner">Dinner</button>
 
-          <button type="button"id="Drinks" name="search"><img src="https://b.zmtcdn.com/images/search_tokens/app_icons/category_3.png?output-format=webp" alt="drinks">Drinks</button>
+        <button type="button" id="TakeOut" name="search"><img
+            src="https://b.zmtcdn.com/images/search_tokens/app_icons/category_5.png?output-format=webp"
+            alt="TakeOut">Take out</button>
+
+        <button type="button" id="Delivery" name="search"><img
+            src="https://b.zmtcdn.com/images/search_tokens/app_icons/category_1.png?output-format=webp"
+            alt="Delivery">Delivery</button>
+
+        <button type="button" id="Drinks" name="search"><img
+            src="https://b.zmtcdn.com/images/search_tokens/app_icons/category_3.png?output-format=webp"
+            alt="drinks">Drinks</button>
 
 
-          <div class="card-footer">
-            <div class="row">
+        <div class="card-footer">
+          <div class="row">
             <div class="col-md-6">
 
 
-          <button type="button" class="collection" ><img src="https://b.zmtcdn.com/data/collections/b53772a204429cb9b42313d6dc22bf3c_1556018415.jpg?fit=around%7C300%3A250&crop=300%3A250%3B%2A%2C%2A"alt="trending pic" id="trending">Trending this week</button>
+              <button type="button" class="collection"><img
+                  src="https://b.zmtcdn.com/data/collections/b53772a204429cb9b42313d6dc22bf3c_1556018415.jpg?fit=around%7C300%3A250&crop=300%3A250%3B%2A%2C%2A"
+                  alt="trending pic" id="trending">Trending this week</button>
 
-    <hr>
-          <button type="button" class="collection" ><img src ="https://b.zmtcdn.com/data/collections/67c4acc3f607dbcff71a8e1e77a70c8a_1535469199.jpg?fit=around%7C300%3A250&ampcrop=300%3A250%3B%2A%2C%2A"alt="Happy Hours pic"id="happyHour">Happy Hour</button>
+              <hr>
+              <button type="button" class="collection"><img
+                  src="https://b.zmtcdn.com/data/collections/67c4acc3f607dbcff71a8e1e77a70c8a_1535469199.jpg?fit=around%7C300%3A250&ampcrop=300%3A250%3B%2A%2C%2A"
+                  alt="Happy Hours pic" id="happyHour">Happy Hour</button>
 
-    <hr>
+              <hr>
+            </div>
           </div>
-          </div>
-            <div class="row">
-              <div class="col-md-6">
-          <button type="button" class="collection" ><img src="https://b.zmtcdn.com/data/collections/d38669ed7b829ceb2814678420a629da_1560353561.jpg?fit=around%7C300%3A250&ampcrop=300%3A250%3B%2A%2C%2A"alt="Kickass burgers pic" id="burgers">Kickass Burgers</button>
+          <div class="row">
+            <div class="col-md-6">
+              <button type="button" class="collection"><img
+                  src="https://b.zmtcdn.com/data/collections/d38669ed7b829ceb2814678420a629da_1560353561.jpg?fit=around%7C300%3A250&ampcrop=300%3A250%3B%2A%2C%2A"
+                  alt="Kickass burgers pic" id="burgers">Kickass Burgers</button>
 
-  <hr>
-          <button type="button" class="collection" > <img src ="https://b.zmtcdn.com/data/collections/33ebdc279ce63a293c52095b1facf611_1539323119.jpg?fit=around%7C300%3A250&ampcrop=300%3A250%3B%2A%2C%2A" alt="Late night Restaurants"id="lateNight">Late Night</button>
+              <hr>
+              <button type="button" class="collection"> <img
+                  src="https://b.zmtcdn.com/data/collections/33ebdc279ce63a293c52095b1facf611_1539323119.jpg?fit=around%7C300%3A250&ampcrop=300%3A250%3B%2A%2C%2A"
+                  alt="Late night Restaurants" id="lateNight">Late Night</button>
 
             </div>
           </div>
         </div>
-        </div>
-          </span>
-      </div>
-      <!-- end page1, start page 2, with restaurant info output-->
-      <div class="page2">
+    </div>
+    </span>
+  </div>
+  <!-- end page1, start page 2, with restaurant info output-->
+  <div class="page2">
 
 
-          <img class="images"src="https://ak2.picdn.net/shutterstock/videos/2427452/thumb/1.jpg" alt="restaurant pic">
-          <img class="images"src="https://uhdwallpapers.org/uploads/cache/4022376060/golden-gate-bridge_600x338-mm-90.jpg" alt="restaurant pic">
-          <img class="images"src="https://upload.wikimedia.org/wikipedia/commons/a/a8/Sydney_harbour_bridge_new_south_wales.jpg" alt="restaurant pic">
+    <img class="images" src="https://ak2.picdn.net/shutterstock/videos/2427452/thumb/1.jpg" alt="restaurant pic">
+    <img class="images" src="https://uhdwallpapers.org/uploads/cache/4022376060/golden-gate-bridge_600x338-mm-90.jpg"
+      alt="restaurant pic">
+    <img class="images"
+      src="https://upload.wikimedia.org/wikipedia/commons/a/a8/Sydney_harbour_bridge_new_south_wales.jpg"
+      alt="restaurant pic">
 
-          <p>
-              <button type="button" class="btn btn-primary btn-block"onclick="location.reload();">Go back to Home page</button>
-          </p>
-          <br>
+    <p>
+      <button type="button" class="btn btn-primary btn-block" onclick="location.reload();">Go back to Home page</button>
+    </p>
+    <br>
 
-      </div>
-        <div id="outputTitle"></div>
-        <div id="testout"></div>
-    </body>
+  </div>
+  <div id="outputTitle"></div>
+  <div id="testout"></div>
+</body>
+
 </html>

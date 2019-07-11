@@ -51,6 +51,7 @@ body{
   height: 200px;
   width: auto;
   max-width: 100%;
+  border-radius: 10px;
 }
 
 #Breakfast, #Lunch, #Dinner, #TakeOut, #Delivery, #Drinks{
@@ -79,7 +80,8 @@ body{
   font-size: 18pt;
   background-color: transparent;
  border-color: transparent;
- color: #83D1A7
+ color: #83D1A7;
+ border-radius: 10px;
 
 }
 
@@ -107,6 +109,7 @@ body{
 }
 .imageSize{
   width: 30%;
+  border-radius: 10px;
 }
 .page1{
   position: absolute;

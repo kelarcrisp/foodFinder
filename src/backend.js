@@ -30,11 +30,12 @@ export class RestaurantSearch {
     //checks for localStorage
     if (localStorage.getItem(`${entity_id}${entity_type}${cuisine}`)) {
       let local = localStorage.getItem(`${entity_id}${entity_type}${cuisine}`)
-      console.log("Accessed the localStorage loop");
       let deetsList = [];
       let body = JSON.parse(local);
       for (let i=0; i < 10; i++) {
         let source = body.restaurants[i].restaurant;
+        let lat = source.location.latitude;
+        let long = source.location.longitude;
         let name = source.name;
         let hours = source.timings;
         let rating = source.user_rating.aggregate_rating;
@@ -42,7 +43,7 @@ export class RestaurantSearch {
         let image = source.featured_image;
         let reviews = source.all_reviews.reviews;
         let address = [source.location.address, source.location.city, source.location.zipcode]
-        let restaurant = new Restaurant (name, hours, rating, url, image, reviews, address);
+        let restaurant = new Restaurant (name, hours, rating, url, image, reviews, address, lat, long);
         deetsList.push(restaurant);
       }
       return deetsList;
@@ -55,9 +56,6 @@ export class RestaurantSearch {
         if (cuisine === "happyHour") {
           query = `&collection_id=339`;
         }
-        if ( cuisine === 'delivery') {
-          query = `&collection_id=434`
-        }
         if (cuisine === "burgers") {
           query = `&collection_id=5`;
         }
@@ -65,7 +63,7 @@ export class RestaurantSearch {
           query = `&collection_id=6`;
         }
         let request = new XMLHttpRequest();
-        let url = `https://cors-anywhere.herokuapp.com/https://developers.zomato.com/api/v2.1/search?entity_id=${entity_id}&entity_type=${entity_type}${query}&sort=rating&order=desc`;
+        let url = `https://cors-anywhere.herokuapp.com/https://developers.zomato.com/api/v2.1/search?entity_id=${entity_id}&entity_type=${entity_type}${query}&radius=5000&sort=rating&order=desc`;
         request.onload = function() {
           if (this.status === 200) {
             resolve(request.response);
@@ -80,9 +78,11 @@ export class RestaurantSearch {
       return promise.then(function(response){
         let deetsList = [];
         let body = JSON.parse(response);
-        console.log("Accessed the call loop");
+        console.log(body);
         for (let i=0; i < 10; i++) {
           let source = body.restaurants[i].restaurant;
+          let lat = source.location.latitude;
+          let long = source.location.longitude;
           let name = source.name;
           let hours = source.timings;
           let rating = source.user_rating.aggregate_rating;
@@ -90,7 +90,7 @@ export class RestaurantSearch {
           let image = source.featured_image;
           let reviews = source.all_reviews.reviews;
           let address = [source.location.address, source.location.city, source.location.zipcode]
-          let restaurant = new Restaurant (name, hours, rating, url, image, reviews, address);
+          let restaurant = new Restaurant (name, hours, rating, url, image, reviews, address, lat, long);
           deetsList.push(restaurant);
         }
         localStorage.setItem(`${entity_id}${entity_type}${cuisine}`, JSON.stringify(body));
@@ -102,13 +102,14 @@ export class RestaurantSearch {
 }
 
 
-
-function Restaurant (name, hours, rating, url, image, reviews, address) {
+function Restaurant (name, hours, rating, url, image, reviews, address, lat, long) {
   this.name = name,
   this.hours = hours,
   this.rating = rating,
   this.url = url,
   this.image = image,
   this.reviews = reviews,
-  this.address = address
+  this.address = address,
+  this.lat = lat,
+  this.long = long
 }

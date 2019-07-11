@@ -1,7 +1,12 @@
 :root {
-  --title-bg-color: #d5fff3; 
+  --title-bg-color: #d5fff3;
   --card-color: #a2aebb;
   --main-font: 'Quicksand', sans-serif;
+}
+.map{
+  width: 100%;
+  height: 100%;
+  position: absolute;
 }
 
 body{
@@ -22,7 +27,7 @@ body{
 .topSection{
   background-color: var(--title-bg-color);
   width: 100%;
-  
+
 }
 
 .topTitle{

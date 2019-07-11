@@ -6,7 +6,7 @@
 .map{
   top: 0;
   bottom: 0;
-  width: 100%;
+  width: 400px;
   position: absolute;
 }
 
@@ -23,6 +23,7 @@ body{
 .flex-item{
   padding: 1px;
 }
+
 /* user input section */
 
 .topSection{

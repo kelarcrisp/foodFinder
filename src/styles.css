@@ -39,6 +39,9 @@ body{
 /* three images page1 */
 .flex-images-container{
   display: inline-flex;
+  justify-content: center;
+  align-content: center;
+  width: 100%;
 
 }
 .flex-image{

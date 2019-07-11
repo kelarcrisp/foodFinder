@@ -109,6 +109,7 @@ body{
 }
 .imageSize{
   width: 30%;
+  border-radius: 10px;
 }
 .page1{
   position: absolute;

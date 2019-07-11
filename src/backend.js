@@ -78,7 +78,6 @@ export class RestaurantSearch {
       return promise.then(function(response){
         let deetsList = [];
         let body = JSON.parse(response);
-        console.log(body);
         for (let i=0; i < 10; i++) {
           let source = body.restaurants[i].restaurant;
           let lat = source.location.latitude;

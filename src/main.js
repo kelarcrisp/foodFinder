@@ -3,14 +3,13 @@ import "bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./styles.css";
 import { RestaurantSearch } from "./backend.js";
-const loadGoogleMapsApi = require('load-google-maps-api')
 const mapboxgl = require('mapbox-gl/dist/mapbox-gl.js');
 // import Map from 'pigeon-maps'
 // import Marker from 'pigeon-marker'
 // import Overlay from 'pigeon-overlay'
 
 $(document).ready(function(){
-//login box
+  //login box
   if (localStorage.username)
   {
     $('.login-page').hide();
@@ -25,51 +24,51 @@ $(document).ready(function(){
 //end login box
 
 //main search field
-$("#search").click(function(event){
+$("#search").click(function(){
 
     let cuisineID = $("#cuisineID").val();
     work(cuisineID)
   });
 
 //category buttons
-  $("#Breakfast").click(function(event){
+  $("#Breakfast").click(function(){
     let cuisineID = "breakfast"
     work(cuisineID)
   });
-  $("#Lunch").click(function(event){
+  $("#Lunch").click(function(){
     let cuisineID = "lunch"
     work(cuisineID);
   });
-  $("#Dinner").click(function(event){
+  $("#Dinner").click(function(){
     let cuisineID = "Dinner"
     work(cuisineID);
   });
-  $("#TakeOut").click(function(event){
+  $("#TakeOut").click(function(){
     let cuisineID = "take out"
     work(cuisineID);
   });
-  $("#Delivery").click(function(event){
+  $("#Delivery").click(function(){
     let cuisineID = "delivery"
     work(cuisineID);
   });
-  $("#Drinks").click(function(event){
+  $("#Drinks").click(function(){
     let cuisineID = "drinks"
     work(cuisineID);
   });
 //collection buttons
-  $("#trending").click(function(event){
+  $("#trending").click(function(){
     let cuisineID = "trending"
     work(cuisineID);
   });
-  $("#happyHour").click(function(event){
+  $("#happyHour").click(function(){
     let cuisineID = "happyHour"
     work(cuisineID);
   });
-  $("#burgers").click(function(event){
+  $("#burgers").click(function(){
     let cuisineID = "burgers"
     work(cuisineID);
   });
-  $("#lateNight").click(function(event){
+  $("#lateNight").click(function(){
     let cuisineID = "lateNight"
     work(cuisineID);
   });
@@ -141,6 +140,10 @@ function work(cuisineID){
             center: [restaurant[i].long, restaurant[i].lat], // starting position [lng, lat]
             zoom: 15 // starting zoom
             });
+            //sets a marker at location of restaurant
+            let marker = new mapboxgl.Marker({anchor: 'center'})
+            marker.setLngLat([restaurant[i].long, restaurant[i].lat])
+            marker.addTo(map);
           $("#testout").slideDown();
           $('.bar').hide();
         }
@@ -177,10 +180,10 @@ function work(cuisineID){
               center: [restaurant[i].long, restaurant[i].lat], // starting position [lng, lat]
               zoom: 15 // starting zoom
               });
-              let marker = new mapboxgl.Marker()
+              //sets a marker at location of restaurant
+              let marker = new mapboxgl.Marker({anchor: 'center'})
               marker.setLngLat([restaurant[i].long, restaurant[i].lat])
               marker.addTo(map);
-
             $("#testout").slideDown()
             $('.bar').hide();
           }

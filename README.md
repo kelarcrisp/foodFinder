@@ -58,3 +58,27 @@ Navigation - navbar, framework, redux router
 Styling - create color scheme. Use css variables, loading screen 
 
 Deploying website! lots of options
+
+<!-- $("#testout").hide();
+          for(var i = 0; i < restaurant.length; i++){
+            $("#testout").append(`
+          <div class='row card-body'>
+              <div class='col-md-6'>
+                <div class='card-header test'>
+                  <img class="imageSize"src='${restaurant[i].image}'> ${restaurant[i].name}
+                </div>
+                <br>
+                <div>
+                  Hours: ${restaurant[i].hours}
+                  <br>
+                  Rating: ${restaurant[i].rating}<br>
+                  <a href="${restaurant[i].url}">${restaurant[i].name} Website</a>
+                </div>
+              </div>
+              <div class='col-md-6'>
+                <div class='map-box'>
+                map goes here
+                </div>
+              </div>
+            </div>
+            <br>`); -->

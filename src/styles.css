@@ -1,20 +1,54 @@
-.topTitle{
-  text-align: center;
+:root {
+  --title-bg-color: #d5fff3; 
+  --card-color: #a2aebb;
+  --main-font: 'Quicksand', sans-serif;
 }
 
-.page2{
-  display: none;
+body{
+  background-color: var(--title-bg-color);
 }
-.container{
-  background-color:#83D1A7
+
+.flex-container{
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+
+.flex-item{
+  padding: 1px;
+}
+/* user input section */
+
+.topSection{
+  background-color: var(--title-bg-color);
+  width: 100%;
+  
+}
+
+.topTitle{
+  margin-top: 2%;
+  font-family: var(--main-font);
+  text-align: center;
+  font-size: 60pt;
+}
+
+.inputText {
+  font-size: 20pt;
+  font-family: var(--main-font);
+}
+/* three images page1 */
+.flex-images-container{
+  display: inline-flex;
+
+}
+.flex-image{
+  padding: 2px;
 }
 .images{
   height: 200px;
-  width: 30%;
-  background-color:#83D1A7;
+  width: auto;
+  max-width: 100%;
 }
-
-
 
 #Breakfast, #Lunch, #Dinner, #TakeOut, #Delivery, #Drinks{
   padding: 10px 20px;
@@ -30,13 +64,11 @@
       width: 40%;
   color: #D1D5DE;
 }
-.container{
+.container-fluid{
   font-family: 'Hind Siliguri', sans-serif;
 }
 
-body{
-  background-color: #83D1A7;
-}
+/* styling for restaurant cards */
 .card{
   background-color: #2E4057;
 }
@@ -48,10 +80,25 @@ body{
 
 }
 
+.card-res{
+  border:2px solid #a2aebb;
+}
+
 .test{
+  font-size: 25pt;
+  font-family: var(--main-font);
   background-color: aquamarine;
 }
 
+.map-box{
+  display: inline;
+
+}
+.card-body{
+  align-content: center;
+  font-family: var(--main-font);
+  font-size: 20pt;
+}
 .outputResults{
   text-align: center;
 }
@@ -60,6 +107,7 @@ body{
 }
 .page1{
   position: absolute;
+  width: 100%;
 }
 .login-page{
 position: absolute;
@@ -116,5 +164,9 @@ height: 100%;
   color: #4CAF50;
 }
 .form .register-form{
+  display: none;
+}
+
+.page2{
   display: none;
 }

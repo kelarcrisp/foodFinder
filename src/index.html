@@ -12,16 +12,16 @@
     <!-- login promt -->
     <div class="login-page">
       <div class="form">
-        <form class="register-form">
-          <input type="text" placeholder="username">
-          <input type="text" placeholder="password">
-          <input type="text" placeholder="email id">
-          <button type="button" name="button" class="signIn">Create</button>
+          <form class="register-form">
+          <input type="text" id ="userInput"placeholder="username" required>
+          <input type="text" placeholder="password" required>
+          <input type="text" placeholder="email id" required>
+          <button type="button" name="button"class="signIn">Create</button>
           <p class="message">Already Registered? <a href="#">Login</a></p>
         </form>
         <form class="login-form">
-          <input type="text" required placeholder="user name" />
-          <input type="password" required placeholder="password" />
+          <input type="text"id ="userInput" placeholder="user name" required>
+          <input type="password" placeholder="password" required>
           <button type="button" name="button" class="signIn">login</button>
           <p class="message"> not Registered? <a href="#"> Register</a></p>
         </form>
@@ -142,9 +142,8 @@
     </p>
     <br>
   </div>
-  <!-- restaurant results area -->
-  <div id="outputTitle"></div>
-  <div id="testout"></div>
-</body>
-
+      <div class="bar"></div>
+        <div id="outputTitle"></div>
+        <div id="testout"></div>
+    </body>
 </html>

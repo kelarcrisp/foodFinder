@@ -1,0 +1,180 @@
+:root {
+  --title-bg-color: #d5fff3;
+  --card-color: #a2aebb;
+  --main-font: 'Quicksand', sans-serif;
+}
+.map{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+
+body{
+  background-color: var(--title-bg-color);
+}
+
+.flex-container{
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+
+.flex-item{
+  padding: 1px;
+}
+/* user input section */
+
+.topSection{
+  background-color: var(--title-bg-color);
+  width: 100%;
+
+}
+
+.topTitle{
+  margin-top: 2%;
+  font-family: var(--main-font);
+  text-align: center;
+  font-size: 60pt;
+}
+
+.inputText {
+  font-size: 20pt;
+  font-family: var(--main-font);
+}
+/* three images page1 */
+.flex-images-container{
+  display: inline-flex;
+  justify-content: center;
+  align-content: center;
+  width: 100%;
+
+}
+.flex-image{
+  padding: 2px;
+}
+.images{
+  height: 200px;
+  width: auto;
+  max-width: 100%;
+}
+
+#Breakfast, #Lunch, #Dinner, #TakeOut, #Delivery, #Drinks{
+  padding: 10px 20px;
+      font-size: 20px;
+      border-radius: 10px;
+      width: 160px;
+}
+
+.collectionText{
+  font-size: 18pt;
+  padding: 10px 20px;
+      border-radius: 10px;
+      width: 40%;
+  color: #D1D5DE;
+}
+.container-fluid{
+  font-family: 'Hind Siliguri', sans-serif;
+}
+
+/* styling for restaurant cards */
+.card{
+  background-color: #2E4057;
+}
+.collection{
+  font-size: 18pt;
+  background-color: transparent;
+ border-color: transparent;
+ color: #83D1A7
+
+}
+
+.card-res{
+  border:2px solid #a2aebb;
+}
+
+.test{
+  font-size: 25pt;
+  font-family: var(--main-font);
+  background-color: aquamarine;
+}
+
+.map-box{
+  display: inline;
+
+}
+.card-body{
+  align-content: center;
+  font-family: var(--main-font);
+  font-size: 20pt;
+}
+.outputResults{
+  text-align: center;
+}
+.imageSize{
+  width: 30%;
+}
+.page1{
+  position: absolute;
+  width: 100%;
+}
+.login-page{
+position: absolute;
+z-index: 2;
+width: 100%;
+padding: 10% 0 0;
+margin: auto;
+opacity: .9;
+background-color: grey;
+height: 100%;
+
+}
+.form{
+  position: relative;
+  background: rgba(7, 40, 195, 0.8);
+  max-width: 360px;
+  margin: 0 auto 100px;
+  padding: 45px;
+  text-align: center;
+
+}
+.form input{
+  font-family: "Roboto", sans-serif;
+  outline: 1;
+  background: #f2f2f2;
+  width: 100%;
+  border: 0;
+  margin: 0 0 15px;
+  padding: 15px;
+  box-sizing: border-box;
+  font-size: 14px;
+}
+.form button{
+  font-family: "Roboto", sans-serif;
+  text-transform: uppercase;
+  outline: 0;
+  background: #4CAF50;
+  width: 100%;
+  border: 0;
+  padding: 15px;
+  font-size: 14px;
+  cursor: pointer;
+}
+.form button:hover,.form button:active{
+  background: #43A047;
+}
+
+.form .message{
+  margin: 15px 0 0;
+  color: aliceblue;
+  font-size: 12px;
+}
+.form .message a{
+  color: #4CAF50;
+}
+.form .register-form{
+  display: none;
+}
+
+.page2{
+  display: none;
+}

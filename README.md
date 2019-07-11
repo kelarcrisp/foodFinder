@@ -1,28 +1,28 @@
 # Food Finder Web App
 
-#### _By ** Kelar Crisp, Rochelle Roberts, Joe, Trevor **_
+#### _By Kelar Crisp, Rochelle Roberts, Joe Tubridy, Trevor Teigen_
 
 ## Description
 Food Finder makes it easy and fun to find restaurants in any area! Discover your new favorite restaurant by searching cuisine type or food category.
 
 
 ### Specs
-| Spec |
-| :-------------     |
-get list of restaurants for seattle- name, address , reviews, cuisine
-get list of restaurants based on user Input
-cuisine filter - filter restaurants based on cuisine type
-rating filter -
-hamburger-u search
-distance filter
-suggested search dropdown for UI
+| Spec | Result |
+| :-------------     | :-------------     |
+| Get list of restaurants for given area | name, address , reviews, cuisine for each restaurant |
+| Get list of restaurants when click on food category | name, address , reviews, cuisine for each restaurant |
+| Cuisine filter | show restaurants of that cuisine |
+| Rating Filter | automatically returns top ten restaurants matching search |
+| Suggest cuisine to users | dropdown for UI |
 
 
 
 ## Setup/Installation Requirements
-
 * Clone this repository, install dependencies, run project
 
+* If using mac change package.json to "start": "npm run build; webpack-dev-server --open --mode development"
+
+* If using windows change package.json to "start": "npm run build && webpack-dev-server --open --mode development"
 ```sh
 $ git clone https://github.com/epicoding95/foodFinder.git
 $ cd foodFinder
@@ -40,45 +40,16 @@ $ npm run start
 * Bootstrap
 * Webpack
 
-## Support and contact details
-
-
-
 ### License
 
 *GNU GPLv3*
 
-## Things To Do!
-Cached data - storage, load faster, progressive web apps, using service worker progressively faster. Chrome performance and memory tab
+## Additional Features
+* Cached data
+    * Used local storage to save restaurant data to reduce the total number of API calls needed
 
-User analytics - track clicks, track with cookie or sign in. 
+* Styling 
+    * Created a color scheme for a visually pleasing user experience
 
-Navigation - navbar, framework, redux router 
+* Deploying app to 
 
-Styling - create color scheme. Use css variables, loading screen 
-
-Deploying website! lots of options
-
-<!-- $("#testout").hide();
-          for(var i = 0; i < restaurant.length; i++){
-            $("#testout").append(`
-          <div class='row card-body'>
-              <div class='col-md-6'>
-                <div class='card-header test'>
-                  <img class="imageSize"src='${restaurant[i].image}'> ${restaurant[i].name}
-                </div>
-                <br>
-                <div>
-                  Hours: ${restaurant[i].hours}
-                  <br>
-                  Rating: ${restaurant[i].rating}<br>
-                  <a href="${restaurant[i].url}">${restaurant[i].name} Website</a>
-                </div>
-              </div>
-              <div class='col-md-6'>
-                <div class='map-box'>
-                map goes here
-                </div>
-              </div>
-            </div>
-            <br>`); -->

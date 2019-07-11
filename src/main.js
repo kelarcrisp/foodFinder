@@ -37,7 +37,7 @@ $(document).ready(function(){
 
       $(".page1").hide();
       $(".page2").show();
-      $("#outputTitle").html(`<h2 class="outputResults">${cuisineID} results</h2>`)
+      $("#outputTitle").html(`<h2 class="outputResults">${cuisineID} results</h2>`);
 
 //placeb---- progress bar
       let timer = 0
@@ -54,20 +54,59 @@ $(document).ready(function(){
 //checks if localStorage exists, if not calls API
       if (localStorage.getItem(`${entityID}${entityType}${cuisineID}`)) {
         let restaurant = deetsPromise;
-        $("#testout").hide()
+        $("#testout").hide();
+        // make the card for each restaurant
         for(var i = 0; i < restaurant.length; i++){
-          $("#testout").append(`<div class='card-header test'><img class="imageSize"src='${restaurant[i].image}'> ${restaurant[i].name}</div><br> <div class=card-body>Hours: ${restaurant[i].hours}
-          <br>rating: ${restaurant[i].rating}<br><a href="${restaurant[i].url}">${restaurant[i].name} Website</div><br>`);
-          $("#testout").slideDown()
+          $("#testout").append(`
+          <div class='row card-body'>
+              <div class='col-md-6 '>
+                <div class='card-header test card-res'>
+                  <img class="imageSize"src='${restaurant[i].image}'> ${restaurant[i].name}
+                </div>
+                
+                <div class='card-res'>
+                  Hours: ${restaurant[i].hours}
+                  <br>
+                  Rating: ${restaurant[i].rating}<br>
+                  <a href="${restaurant[i].url}">${restaurant[i].name} Website</a>
+                </div>
+              </div>
+              <div class='col-md-6'>
+                <div class='map-box'>
+                map goes here
+                </div>
+              </div>
+            </div>
+            <br>`);
+          $("#testout").slideDown();
           $('.bar').hide();
         }
       } else {
-        console.log(typeof deetsPromise);
+        //console.log(typeof deetsPromise);
         deetsPromise.then((restaurant) => {
-          $("#testout").hide()
+          $("#testout").hide();
           for(var i = 0; i < restaurant.length; i++){
-            $("#testout").append(`<div class='card-header test'><img class="imageSize"src='${restaurant[i].image}'> ${restaurant[i].name}</div><br> <div class=card-body>Hours: ${restaurant[i].hours}
-            <br>rating: ${restaurant[i].rating}<br><a href="${restaurant[i].url}">${restaurant[i].name} Website</div><br>`);
+            $("#testout").append(`
+            <div class='row card-body'>
+                <div class='col-md-6 '>
+                  <div class='card-header test card-res'>
+                    <img class="imageSize"src='${restaurant[i].image}'> ${restaurant[i].name}
+                  </div>
+                  
+                  <div class='card-res'>
+                    Hours: ${restaurant[i].hours}
+                    <br>
+                    Rating: ${restaurant[i].rating}<br>
+                    <a href="${restaurant[i].url}">${restaurant[i].name} Website</a>
+                  </div>
+                </div>
+                <div class='col-md-6'>
+                  <div class='map-box'>
+                  map goes here
+                  </div>
+                </div>
+              </div>
+              <br>`);
             $("#testout").slideDown()
             $('.bar').hide();
           }

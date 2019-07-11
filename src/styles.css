@@ -1,17 +1,15 @@
 :root {
   --title-bg-color: #d5fff3; 
+  --card-color: #a2aebb;
   --main-font: 'Quicksand', sans-serif;
 }
-.login-page{
-  display: none;
-}
+
 body{
   background-color: var(--title-bg-color);
 }
 
 .flex-container{
   display: flex;
-  height: 200px;
   justify-content: center;
   align-content: center;
 }
@@ -38,9 +36,17 @@ body{
   font-size: 20pt;
   font-family: var(--main-font);
 }
+/* three images page1 */
+.flex-images-container{
+  display: inline-flex;
 
+}
+.flex-image{
+  padding: 2px;
+}
 .images{
-  height: 30%;
+  height: 200px;
+  width: auto;
   max-width: 100%;
 }
 
@@ -62,7 +68,7 @@ body{
   font-family: 'Hind Siliguri', sans-serif;
 }
 
-
+/* styling for restaurant cards */
 .card{
   background-color: #2E4057;
 }
@@ -74,10 +80,25 @@ body{
 
 }
 
+.card-res{
+  border:2px solid #a2aebb;
+}
+
 .test{
+  font-size: 25pt;
+  font-family: var(--main-font);
   background-color: aquamarine;
 }
 
+.map-box{
+  display: inline;
+
+}
+.card-body{
+  align-content: center;
+  font-family: var(--main-font);
+  font-size: 20pt;
+}
 .outputResults{
   text-align: center;
 }
@@ -86,6 +107,7 @@ body{
 }
 .page1{
   position: absolute;
+  width: 100%;
 }
 .login-page{
 position: absolute;

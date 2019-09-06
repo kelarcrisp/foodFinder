@@ -41,7 +41,7 @@ $ npm run start
 * Webpack
 
 ## Support and contact details
-* Rochelle Roberts, rochellevroberts@gmail.com
+* For any questions contact me at kelcrisp007@icloud.com
 
 
 ### License

@@ -1,6 +1,6 @@
 # Food Finder Web App
 
-#### _By ** Kelar Crisp, Rochelle Roberts, Joe, Trevor **_
+#### _By ** Kelar, Rochelle, Joe, Trevor **_
 
 ## Description
 Food Finder makes it easy and fun to find restaurants in any area! Discover your new favorite restaurant by searching cuisine type or food category.
